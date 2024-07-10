@@ -9,6 +9,7 @@ const { HumanMessage} = require("@langchain/core/messages");
 const dotenv = require('dotenv');
 dotenv.config({path: './.env.local'});
 const path = require("path");
+const http = require('http');
 const {pdfSummarization} = require('./components/pdf.js')
 
 const token = process.env.TELEGRAM_TOKEN
@@ -160,4 +161,16 @@ else {
   bot.sendMessage(chatId, "This File Type is not supported in this bot")
 }
 
+});
+
+
+const port = process.env.PORT || 3000; // Use the PORT environment variable provided by Render
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Telegram bot is running\n');
+});
+
+server.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
