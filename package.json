@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@langchain/openai": "^0.2.1",
+    "audio-decode": "^2.2.0",
+    "aws-sdk": "^2.1655.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "filereader": "^0.10.3",
+    "langchain": "^0.2.8",
+    "node-telegram-bot-api": "^0.66.0",
+    "openai": "^4.52.3",
+    "pdf-parse": "^1.1.1",
+    "tmp": "^0.2.3"
+  }
+}
